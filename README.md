@@ -6,6 +6,12 @@ By adapting Tensor Product Attention (TPA) to directed flow-graphs, GraphTPA red
 
 ---
 
+## 📖 Abstract
+
+> The proliferation of Industrial Internet of Things (IIoT) architectures demands network intrusion detection systems (NIDS) capable of real-time threat classification at the resource-constrained computing edge. While graph neural networks (GNNs) effectively model complex attack topologies, existing full-rank attention mechanisms incur quadratic memory complexity ($\mathcal{O}(d^2)$), limiting their applicability to industrial edge gateways. We propose GraphTPA, a parameter-efficient GNN architecture designed for resource-constrained deployment. Modeling IIoT endpoint traffic as directed flow-graphs, GraphTPA introduces three contributions: (1) Tensor Product Attention Convolution (TPAConv), which factorizes attention projections to reduce memory complexity to $\mathcal{O}(dr)$; (2) a low-rank bilinear tensor edge representation that captures multiplicative endpoint interactions, improving detection of structurally obscured attacks (e.g., Man-in-the-Middle) with substantially fewer parameters than a full bilinear tensor; and (3) a hierarchical rank adaptation strategy that progressively bounds representations across network depth. Evaluation on five industrial and enterprise benchmarks demonstrates that GraphTPA achieves 96.28% Macro-F1 on BoT-IoT. By requiring 56% fewer parameters than a full-rank graph transformer (2.3× reduction) and executing 2.1× faster inference than the competitive baseline DIDS-MFL, GraphTPA offers a practical approach for parameter-efficient intrusion detection under industrial latency constraints.
+
+---
+
 ## 🚀 Key Features
 
 * **Tensor Product Attention Convolution (TPAConv):** Factorizes Q/K/V projections into low-rank components, explicitly encoding edge attributes with minimal parameter overhead.
