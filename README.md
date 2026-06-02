@@ -37,7 +37,10 @@ GraphTPA was extensively evaluated on five benchmarks:
 5. `NF-UQ-NIDS`
 
 ### Data Preparation
-Download your raw datasets (`.csv` files) and place them into their respective directories under `data/`. For example, place the `NF-ToN-IoT.csv` file inside the `data/NF-ToN-IoT/` directory.
+You can download the raw datasets from the repository releases or data links provided here:
+[GraphTPA Repository](https://github.com/Kkyn-ltcode/GraphTPA-Parameter-Efficient-Tensor-Product-Attention-for-Network-Intrusion-Detection)
+
+Once downloaded, place the `.csv` files into their respective directories under `data/`. **Important:** The `.csv` file name must exactly match the folder that contains it. For example, place the `NF-ToN-IoT.csv` file inside the `data/NF-ToN-IoT/` directory.
 
 To build the PyTorch Geometric graphs and generate node/edge features, run the builder script for your desired dataset:
 
