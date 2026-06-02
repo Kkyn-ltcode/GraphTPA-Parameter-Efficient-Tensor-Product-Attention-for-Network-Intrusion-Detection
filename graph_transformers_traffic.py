@@ -40,6 +40,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Multi Graph Transformer for Network Traffic Classification")
     
     parser.add_argument('--config_path', type=str, required=True, help='Path to config JSON file')
+    parser.add_argument('--dataset', type=str, default=None, help='Dataset name (e.g., NF-ToN-IoT) to override config data_path')
     return parser.parse_args()
 
 def setup_ddp(rank, world_size):
@@ -500,6 +501,10 @@ def main():
             config = json.load(f)
     except Exception as e:
         raise RuntimeError(f"[{datetime.now().strftime('%H:%M:%S')}] Failed to load config from {args.config_path}: {e}")
+        
+    if args.dataset:
+        config['data_path'] = join('data', args.dataset, 'traffic_graph')
+        
     set_seed(config.get('seed', 42))
     config['batch_size'] = int(config['base_batch'] * config['num_mul'])
 

@@ -23,6 +23,12 @@ def parse_args():
         type=str,
         required=True
     )
+    parser.add_argument(
+        '--dataset', 
+        type=str, 
+        default=None, 
+        help='Dataset name (e.g., NF-ToN-IoT) to override config data_path'
+    )
     return parser.parse_args()
 
 class TrafficGraphBuilder():
@@ -227,6 +233,10 @@ class TrafficGraphBuilder():
 def main():
     args = parse_args()
     config = json.load(open(args.config_path, 'r', encoding='utf-8'))
+    
+    if args.dataset:
+        config['data_path'] = args.dataset
+        
     builder = TrafficGraphBuilder(config)
     if config['traffic']['analyze_data']:
         builder.analyze_data()
