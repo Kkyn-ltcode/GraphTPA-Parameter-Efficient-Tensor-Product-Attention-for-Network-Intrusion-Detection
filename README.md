@@ -37,8 +37,8 @@ GraphTPA was extensively evaluated on five benchmarks:
 5. `NF-UQ-NIDS`
 
 ### Data Preparation
-You can download the raw datasets from the repository releases or data links provided here:
-[GraphTPA Repository](https://github.com/Kkyn-ltcode/GraphTPA-Parameter-Efficient-Tensor-Product-Attention-for-Network-Intrusion-Detection)
+You can download the raw NetFlow datasets from the official UQ eSpace repository:
+[UQ eSpace NF Datasets](https://espace.library.uq.edu.au/records/search?searchQueryParams%5Ball%5D=NF&page=1&pageSize=20&sortBy=score&sortDirection=Desc)
 
 Once downloaded, place the `.csv` files into their respective directories under `data/`. **Important:** The `.csv` file name must exactly match the folder that contains it. For example, place the `NF-ToN-IoT.csv` file inside the `data/NF-ToN-IoT/` directory.
 
